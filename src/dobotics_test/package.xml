@@ -3,7 +3,7 @@
 <package format="3">
   <name>dobotics_test</name>
   <version>0.0.0</version>
-  <description>This package made for running several tests on the dobotics workspace.</description>
+  <description>This package is made for running several tests on the dobotics workspace.</description>
   <maintainer email="dhonan.hibatullah@gmail.com">dhonan</maintainer>
   <license>None</license>
 
