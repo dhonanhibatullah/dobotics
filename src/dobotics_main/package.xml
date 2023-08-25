@@ -3,9 +3,12 @@
 <package format="3">
   <name>dobotics_main</name>
   <version>0.0.0</version>
-  <description>This package is made </description>
+  <description>This package is made for launching the main nodes. Most of the workspace features can be ran from dobotics_main</description>
   <maintainer email="dhonan.hibatullah@gmail.com">dhonan</maintainer>
-  <license>TODO: License declaration</license>
+  <license>None</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
