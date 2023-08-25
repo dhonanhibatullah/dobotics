@@ -1,6 +1,8 @@
+# ROS2 build files
 build/
 install/
 log/
 .vscode/
 
+# .log files
 *.log
