@@ -1,1 +1,0 @@
-ROBOT_CONFIG_YAML_PATH = 'src/dobotics_main/config/robot/robot_config.yaml'

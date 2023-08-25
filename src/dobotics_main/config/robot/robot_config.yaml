@@ -1,9 +1,6 @@
 robot:
-- robotis_op3:
-    name: 'Robotis OP3'
+- name: 'Robotis OP3'
 
-- robotis_turtlebot3:
-    name: 'Robotis Turtlebot3'
+- name: 'Robotis Turtlebot3'
 
-- boston_dynamics_spot:
-    name: 'Boston Dynamics Spot'
+- name: 'Boston Dynamics Spot'

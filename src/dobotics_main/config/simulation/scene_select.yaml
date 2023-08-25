@@ -1,0 +1,5 @@
+# scene_select.yaml is used for selecting the scene to be ran into the pybullet physics
+# The list of scenes that can be selected is shown by the following:
+#   1. A Robotis OP3 robot on a samurai temple
+
+scene_number: 1
