@@ -7,7 +7,7 @@ def main(args=None):
     # Get the .yaml file
     with open(YAML_FILE_PATH, 'r') as file:
         yaml_file = yaml.load(file, Loader=yaml.FullLoader)
-    for robot in yaml_file['robot']:
+    for robot in yaml_file['robot_info']:
         print(robot['name'])
 
 if __name__ == '__main__':
