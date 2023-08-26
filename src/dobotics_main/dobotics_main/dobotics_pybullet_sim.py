@@ -1,3 +1,4 @@
+import rclpy
 import pybullet as pb
 import pybullet_data
 import time
@@ -8,14 +9,18 @@ from .submodule.config import *
 
 
 def main(args=None):
+    # Initiate rclpy
+    rclpy.init(args=args)
+
     # Initiate pybullet physics
     physics_client = pb.connect(pb.GUI)
     pb.setGravity(0, 0, -9.8)
     pb.setAdditionalSearchPath(pybullet_data.getDataPath())
+    simulation_fps = SIM_CONFIG_YAML['pybullet_simulation_fps']
 
 
-    # Creating the world scene. Change the scene_number on config/simulation/scene_select.yaml
-    scene_number = SCENE_SELECT_YAML['scene_number']
+    # Creating the world scene. Change the scene_number on config/simulation/simulation_config.yaml
+    scene_number = SIM_CONFIG_YAML['pybullet_scene_number']
 
     # SCENE 1: A Robotis OP3 robot on a samurai temple
     if scene_number == 1:
@@ -26,13 +31,18 @@ def main(args=None):
 
 
     # Simulate
-    for i in range(4000):
+    while rclpy.ok():
+        # Simulate the physics per step
         pb.stepSimulation()
-        time.sleep(1./240.)
-    
+        time.sleep(simulation_fps)
 
-    # Disconnect from physics server
+        # rclpy spin
+        rclpy.spin_once()
+        
+
+    # Disconnect from bullet physics server and shutdown rclpy
     pb.disconnect()
+    rclpy.shutdown()
 
 
 

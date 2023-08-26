@@ -1,12 +1,20 @@
 import yaml
 
+
 # List of paths
 DOBOTICS_MAIN_PATH      = 'src/dobotics_main'
 ROBOT_CONFIG_YAML_PATH  = 'src/dobotics_main/config/robot/robot_config.yaml'
-SCENE_SELECT_YAML_PATH  = 'src/dobotics_main/config/simulation/scene_select.yaml'
+SIM_CONFIG_YAML_PATH    = 'src/dobotics_main/config/simulation/simulation_config.yaml'
 ROBOT_DESCRIPTION_PATH  = 'src/dobotics_main/robot_description'
 ROBOTIS_OP3_DESC_PATH   = 'src/dobotics_main/robot_description/robotis_op3/urdf/robotis_op3.urdf'
 
+
+# List of available robot options
+ROBOTIS_OP3_ENUM            = 0
+ROBOTIS_TURTLEBOT3_ENUM     = 1
+BOSTON_DYNAMICS_SPOT_ENUM   = 2
+
+
 # List of loaded .yaml
 ROBOT_CONFIG_YAML   = yaml.load(open(ROBOT_CONFIG_YAML_PATH, 'r'), Loader=yaml.FullLoader)
-SCENE_SELECT_YAML   = yaml.load(open(SCENE_SELECT_YAML_PATH, 'r'), Loader=yaml.FullLoader)
+SIM_CONFIG_YAML     = yaml.load(open(SIM_CONFIG_YAML_PATH, 'r'), Loader=yaml.FullLoader)

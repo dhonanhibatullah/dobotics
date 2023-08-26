@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<robot name="op3_teamB_keeper">
+    <webots>
+        <plugin type="dobotics_main.dobotics_webots_sim.RobotisOP3Driver">
+            <rclnode>op3_teamB_keeper_driver</rclnode>
+        </plugin>
+    </webots>
+</robot>
