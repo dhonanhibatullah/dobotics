@@ -12,8 +12,8 @@ class DoboticsPybulletOP3(Node):
 
 
 
-    def __init__(self, robot_name:str) -> None:
+    def __init__(self) -> None:
         # Initiate the node
-        super().__init__('dobotics/' + robot_name)
+        super().__init__('default')
 
         # Initiate the publishers and subscribers

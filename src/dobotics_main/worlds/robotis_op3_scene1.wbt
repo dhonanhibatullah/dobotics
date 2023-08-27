@@ -24,4 +24,6 @@ RobotisOp3 {
   translation -1.03 0 0.279
   name "robotis_op3"
   controller "<extern>"
+  cameraWidth 1280
+  cameraHeight 720
 }

@@ -48,6 +48,28 @@ robot_info:
     - 'AnkleL'
     - 'FootL'
 
+  webots_position_sensors :
+    - 'NeckS'
+    - 'HeadS'
+    - 'ShoulderRS'
+    - 'ArmUpperRS'
+    - 'ArmLowerRS'
+    - 'ShoulderLS'
+    - 'ArmUpperLS'
+    - 'ArmLowerLS'
+    - 'PelvYRS'
+    - 'PelvRS'
+    - 'LegUpperRS'
+    - 'LegLowerRS'
+    - 'AnkleRS'
+    - 'FootRS'
+    - 'PelvYLS'
+    - 'PelvLS'
+    - 'LegUpperLS'
+    - 'LegLowerLS'
+    - 'AnkleLS'
+    - 'FootLS'
+
   joints_enumerator :
     # pybullet
     l_hip_yaw   : 1
@@ -91,6 +113,9 @@ robot_info:
     LegLowerL   : 4
     AnkleL      : 5
     FootL       : 6
+
+  link_lengths :
+  
 
 
 

@@ -2,17 +2,19 @@ import os
 from glob import glob
 from setuptools import setup
 
-package_name    = 'dobotics_test'
-submodule       = 'dobotics_test/submodule'
-access_test     = 'dobotics_test/submodule/access_test'
+package_name                    = 'dobotics_controller'
+submodule                       = 'dobotics_controller/submodule'
+robotis_op3_controller          = 'dobotics_controller/submodule/robotis_op3_controller'
+robotis_turtlebot3_controller   = 'dobotics_controller/submodule/robotis_turtlebot3_controller'
 
 setup(
     name                = package_name,
     version             = '0.0.0',
     packages            = [
-        package_name, 
-        submodule, 
-        access_test
+        package_name,
+        submodule,
+        robotis_op3_controller,
+        robotis_turtlebot3_controller
     ],
     data_files          = [
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
@@ -23,15 +25,12 @@ setup(
     zip_safe            = True,
     maintainer          = 'dhonan',
     maintainer_email    = 'dhonan.hibatullah@gmail.com',
-    description         = 'This package made for running several tests on the dobotics workspace.',
+    description         = 'This package contains robot controllers.',
     license             = 'None',
     tests_require       = ['pytest'],
     entry_points        = {
         'console_scripts': [
-            'ros2_talker_example = dobotics_test.ros2_talker_example:main',
-            'ros2_listener_example = dobotics_test.ros2_listener_example:main',
-            'yaml_test = dobotics_test.yaml_test:main',
-            'directory_structure_test = dobotics_test.directory_structure_test:main'
+            'dobotics_robotis_op3_controller = dobotics_controller.dobotics_robotis_op3_controller:main'
         ],
     },
 )

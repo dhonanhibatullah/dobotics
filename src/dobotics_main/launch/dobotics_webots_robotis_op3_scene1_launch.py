@@ -18,16 +18,25 @@ def generate_launch_description():
     )
 
     # Launch the world with controller
-    robot_controller = WebotsController(
+    robotis_op3_driver = WebotsController(
         robot_name  = 'robotis_op3',
         parameters  = [
             {'robot_description': ROBOT_DESC_PATH},
         ]
     )
+    robotis_op3_controller = Node(
+        package     = 'dobotics_controller',
+        executable  = 'dobotics_robotis_op3_controller',
+        name        = 'robotis_op3_controller',
+        parameters  = [
+            {'robot_name_param': 'robotis_op3'}
+        ]
+    )
 
     return LaunchDescription([
         webots,
-        robot_controller,
+        robotis_op3_driver,
+        robotis_op3_controller,
         launch.actions.RegisterEventHandler(
             event_handler = launch.event_handlers.OnProcessExit(
                 target_action   = webots,

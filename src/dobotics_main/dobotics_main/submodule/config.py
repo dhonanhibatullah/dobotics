@@ -18,3 +18,8 @@ BOSTON_DYNAMICS_SPOT_ENUM   = 2
 # List of loaded .yaml
 ROBOT_CONFIG_YAML   = yaml.load(open(ROBOT_CONFIG_YAML_PATH, 'r'), Loader=yaml.FullLoader)
 SIM_CONFIG_YAML     = yaml.load(open(SIM_CONFIG_YAML_PATH, 'r'), Loader=yaml.FullLoader)
+
+
+# Joint enumerator
+def GET_JOINT_ENUM(robot_enum:int, joint_name:str):
+    return ROBOT_CONFIG_YAML['robot_info'][robot_enum]['joints_enumerator'][joint_name]

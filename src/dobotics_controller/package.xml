@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>dobotics_main</name>
+  <name>dobotics_controller</name>
   <version>0.0.0</version>
-  <description>This package is made for launching the main nodes. Most of the workspace features can be ran from dobotics_main.</description>
+  <description>This package contains robot controllers.</description>
   <maintainer email="dhonan.hibatullah@gmail.com">dhonan</maintainer>
   <license>None</license>
 
   <exec_depend>rclpy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
-  <exec_depend>webots_ros2_driver</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
