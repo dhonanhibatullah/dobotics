@@ -1,0 +1,30 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/robotstadium/protos/RobotstadiumSoccerField.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/robotis/darwin-op/protos/RobotisOp3.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/balls/protos/RobocupSoccerBall.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.15307952801642608 -0.14754744684922938 -0.9771368425305341 4.652470009768048
+  position -0.6368650588123201 -3.2853189472037236 1.3583838394971914
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RobotstadiumSoccerField {
+}
+RobocupSoccerBall {
+}
+RobotisOp3 {
+  translation -1.0104721277373458 3.7964196911951565e-06 0.2784157996841121
+  rotation -0.008071477822047165 -0.9999674250902139 2.053276426303699e-06 0.0016901151001012622
+  name "robotis_op3"
+  controller "<extern>"
+  cameraWidth 1280
+  cameraHeight 720
+}

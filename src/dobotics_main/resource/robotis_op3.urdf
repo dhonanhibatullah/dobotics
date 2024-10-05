@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<robot name="robotis_op3">
-    <webots>
-        <plugin type="dobotics_main.dobotics_webots_sim.DoboticsRobotisOP3Driver">
-            <robotName>robotis_op3</robotName>
-        </plugin>
-    </webots>
-</robot>

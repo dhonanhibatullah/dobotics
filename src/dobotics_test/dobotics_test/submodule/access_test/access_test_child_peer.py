@@ -1,1 +1,0 @@
-MESSAGE_CHILD_PEER = 'Hello, parent of my friend!'

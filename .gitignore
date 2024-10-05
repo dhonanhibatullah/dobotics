@@ -1,8 +1,6 @@
-# ROS2 build files
-build/
-install/
-log/
-.vscode/
-
-# .log files
+.vscode
+build
+install
+log
+node_modules
 *.log

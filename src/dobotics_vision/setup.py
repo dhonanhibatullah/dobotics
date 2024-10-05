@@ -2,10 +2,11 @@ import os
 from glob import glob
 from setuptools import setup
 
-package_name = 'dobotics_main'
+package_name = 'dobotics_vision'
 package_list = [
     package_name,
-    os.path.join(package_name, 'modules')
+    os.path.join(package_name, 'modules'),
+    os.path.join(package_name, 'modules', 'profiles')
 ]
 
 setup(
@@ -14,10 +15,7 @@ setup(
     packages            = package_list,
     data_files          = [
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', glob('launch/*.py')),
-        ('share/' + package_name + '/worlds', glob('worlds/*.wbt')),
-        ('share/' + package_name + '/resource', glob('resource/*.urdf'))
+        ('share/' + package_name, ['package.xml'])
     ],
     install_requires    = ['setuptools'],
     zip_safe            = True,
@@ -28,7 +26,8 @@ setup(
     tests_require       = ['pytest'],
     entry_points        = {
         'console_scripts': [
-            'robotis_op3 = dobotics_main.robotis_op3:main',
+            'vision = dobotics_vision.vision:main',
+            'imshow = dobotics_vision.imshow:main'
         ],
     },
 )

@@ -1,0 +1,5 @@
+row: 2
+col: 1
+image_topics:
+- robotis_op3/Camera/image_color
+- robotis_op3/vision
