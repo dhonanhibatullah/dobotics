@@ -1,0 +1,39 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/robotstadium/protos/RobotstadiumSoccerField.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/balls/protos/RobocupSoccerBall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/robotis/darwin-op/protos/RobotisOp3.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.2513129634182411 0.28630978523519024 0.9245909913559189 1.5188594082627767
+  position -1.2909092888386715 -8.464526982900427 5.083090937498568
+}
+DEF SUPERVISOR Robot {
+  name "supervisor_node"
+  supervisor TRUE
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RobotstadiumSoccerField {
+  name "soccer_field"
+}
+RobocupSoccerBall {
+  name "soccer_ball"
+}
+DEF ROBOTIS_OP3_A RobotisOp3 {
+  translation -1.26 0 0.279
+  name "robotis_op3_a"
+  controller "<extern>"
+}
+DEF ROBOTIS_OP3_B RobotisOp3 {
+  translation 1.28 -5.30722e-08 0.279
+  rotation 0 0 1 3.14159
+  name "robotis_op3_b"
+  controller "<extern>"
+}

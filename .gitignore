@@ -1,6 +1,6 @@
+.venv
 .vscode
 build
 install
 log
 node_modules
-*.log
