@@ -1,0 +1,17 @@
+{
+    "name": "RobotisOP3_Single",
+    "states": {
+        "init": [
+            {
+                "defName": "ROBOTIS_OP3",
+                "translation": [-1.2604716987881641, 3.8032883618421126e-06, 0.27841843958020485],
+                "rotation": [0, 0, 1, 0]
+            },
+            {
+                "defName": "BALL",
+                "translation": [0, 0, 0.07],
+                "rotation": [0, 0, 1, 0]
+            }
+        ]
+    }
+}
