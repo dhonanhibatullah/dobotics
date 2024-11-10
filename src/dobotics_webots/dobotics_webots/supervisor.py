@@ -9,8 +9,8 @@ class SupervisorDriver:
 
     def init(self, webots_node, properties) -> None:
         self.parameter_json = json.load(open(get_package_share_directory('dobotics_webots') + f'/{properties['parameterFile']}', 'r'))
-        self.states         = self.parameter_json['states']
-        self.sim_name       = self.parameter_json['name']
+        self.states: dict   = self.parameter_json['states']
+        self.sim_name: str  = self.parameter_json['name']
 
         self.robot: webots.Robot            = webots_node.robot
         self.timestep                       = int(self.robot.getBasicTimeStep())
@@ -22,7 +22,7 @@ class SupervisorDriver:
 
         self.reset_sub = self.node.create_subscription(
             msg_type    = std_msgs.String,
-            topic       = f'{self.sim_name}/reset',
+            topic       = f'{self.sim_name}/stateSet',
             callback    = self.resetCallback,
             qos_profile = 1000
         )
@@ -37,10 +37,10 @@ class SupervisorDriver:
                 node.getField('translation').setSFVec3f(data['translation'])
                 node.getField('rotation').setSFRotation(data['rotation'])
 
-            self.node.get_logger().info('The simulation is reset!')
+            self.node.get_logger().info(f'The simulation state is set to: [{state_key}].')
 
         else:
-            self.node.get_logger().error('Unknown state name.')
+            self.node.get_logger().error(f'Unknown state name. Available keys are: {list(self.states.keys())}.')
 
     
     def step(self) -> None:

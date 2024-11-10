@@ -8,10 +8,10 @@ from webots_ros2_driver.webots_controller import WebotsController
 
 
 def generate_launch_description():
-    WEBOTS_SHARE_PATH           = get_package_share_directory('dobotics_webots')
-    SUPERVISOR_URDF_PATH        = os.path.join(WEBOTS_SHARE_PATH, 'project', 'RobotisOP3', 'descriptions', 'single_supervisor.urdf')
-    SINGLE_URDF_PATH            = os.path.join(WEBOTS_SHARE_PATH, 'project', 'RobotisOP3', 'descriptions', 'single.urdf')
-    WORLD_PATH                  = os.path.join(WEBOTS_SHARE_PATH, 'project', 'RobotisOP3', 'worlds', 'single.wbt')
+    WEBOTS_SHARE_PATH       = get_package_share_directory('dobotics_webots')
+    SUPERVISOR_URDF_PATH    = os.path.join(WEBOTS_SHARE_PATH, 'project', 'RobotisOP3', 'descriptions', 'single_supervisor.urdf')
+    SINGLE_URDF_PATH        = os.path.join(WEBOTS_SHARE_PATH, 'project', 'RobotisOP3', 'descriptions', 'single.urdf')
+    WORLD_PATH              = os.path.join(WEBOTS_SHARE_PATH, 'project', 'RobotisOP3', 'worlds', 'single.wbt')
     
     webots = WebotsLauncher(world = WORLD_PATH)
 
