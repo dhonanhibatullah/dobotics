@@ -24,7 +24,7 @@ TexturedBackgroundLight {
 RobotstadiumSoccerField {
   name "soccer_field"
 }
-RobocupSoccerBall {
+DEF BALL RobocupSoccerBall {
   name "soccer_ball"
 }
 DEF ROBOTIS_OP3_A RobotisOp3 {
