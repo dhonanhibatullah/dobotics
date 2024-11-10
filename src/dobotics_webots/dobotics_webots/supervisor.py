@@ -4,6 +4,7 @@ import rclpy
 import std_msgs.msg as std_msgs
 import controller as webots
 
+
 class SupervisorDriver:
 
     def init(self, webots_node, properties) -> None:
@@ -35,7 +36,7 @@ class SupervisorDriver:
                 node = self.supervisor.getFromDef(data['defName'])
                 node.getField('translation').setSFVec3f(data['translation'])
                 node.getField('rotation').setSFRotation(data['rotation'])
-                
+
             self.node.get_logger().info('The simulation is reset!')
 
         else:
