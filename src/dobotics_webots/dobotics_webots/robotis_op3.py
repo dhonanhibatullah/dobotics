@@ -60,11 +60,10 @@ class RobotisOp3Config:
 class RobotisOp3Driver:
 
     def init(self, webots_node, properties) -> None:
-        self.robot: webots.Robot        = webots_node.robot
-        self.robot_name: str            = properties['robotName']
-        self.timestep: int              = int(self.robot.getBasicTimeStep())
-        self.simulation_time_ms: int    = 0
-        self.config                     = RobotisOp3Config()
+        self.robot: webots.Robot    = webots_node.robot
+        self.robot_name: str        = properties['robotName']
+        self.timestep               = int(self.robot.getBasicTimeStep())
+        self.config                 = RobotisOp3Config()
 
         self.joint: Dict[str, webots.Motor]                 = {}
         self.joint_sensor: Dict[str, webots.PositionSensor] = {}
@@ -86,7 +85,7 @@ class RobotisOp3Driver:
         self.gyro.enable(self.timestep)
         self.camera.enable(self.timestep)
 
-        rclpy.init(args=None)
+        rclpy.init(args = None)
         self.node = rclpy.create_node(self.robot_name + '_DriverNode')
         
         self.joint_sensor_msg       = std_msgs.Float64MultiArray()
@@ -108,12 +107,12 @@ class RobotisOp3Driver:
         self.joint_velocity_sub = self.node.create_subscription(
             msg_type    = std_msgs.Float64MultiArray,
             topic       = f'{self.robot_name}/JointVelocity',
-            callback    = self.jointSubCallback,
+            callback    = self.jointVelocitySubCallback,
             qos_profile = 1000
         )
 
 
-    def jointVelocitySubCallback(self, msg:std_msgs.Float64MultiArray) -> None:
+    def jointVelocitySubCallback(self, msg: std_msgs.Float64MultiArray) -> None:
         self.joint_velocity     = msg.data.tolist().copy()
         self.joint_velocity_set = True
 
@@ -136,4 +135,3 @@ class RobotisOp3Driver:
     def step(self) -> None:
         rclpy.spin_once(self.node, timeout_sec=0.0)
         self.update()
-        self.simulation_time_ms += self.timestep

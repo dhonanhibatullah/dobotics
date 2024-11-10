@@ -2,10 +2,10 @@ import os
 from glob import glob
 from setuptools import setup
 
-package_name = 'dobotics_vision'
+package_name = 'dobotics_controllers'
 package_list = [
     package_name,
-    package_name + 'modules'
+    package_name + '/modules'
 ]
 
 setup(

@@ -13,8 +13,9 @@ Viewpoint {
   position -1.2909092888386715 -8.464526982900427 5.083090937498568
 }
 DEF SUPERVISOR Robot {
-  name "supervisor_node"
+  name "supervisor"
   supervisor TRUE
+  controller "<extern>"
 }
 TexturedBackground {
 }

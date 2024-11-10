@@ -13,8 +13,9 @@ Viewpoint {
   position -1.2909092888386715 -8.464526982900427 5.083090937498568
 }
 DEF SUPERVISOR Robot {
-  name "supervisor_node"
+  name "supervisor"
   supervisor TRUE
+  controller "<extern>"
 }
 TexturedBackground {
 }
@@ -23,7 +24,7 @@ TexturedBackgroundLight {
 RobotstadiumSoccerField {
   name "soccer_field"
 }
-RobocupSoccerBall {
+DEF BALL RobocupSoccerBall {
   name "soccer_ball"
 }
 DEF ROBOTIS_OP3 RobotisOp3 {

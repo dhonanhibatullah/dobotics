@@ -18,8 +18,9 @@ driver_list = [
 def generate_projects() -> list[tuple]:
     projects = []
     for project_name in project_list:
-        projects.append(('share/' + package_name + '/projects' + f'/{project_name}' + '/worlds', glob(f'project/{project_name}/worlds/*.wbt')))
-        projects.append(('share/' + package_name + '/projects' + f'/{project_name}' + '/descriptions', glob(f'project/{project_name}/descriptions/*.urdf')))
+        projects.append(('share/' + package_name + '/project' + f'/{project_name}' + '/worlds', glob(f'project/{project_name}/worlds/*.wbt')))
+        projects.append(('share/' + package_name + '/project' + f'/{project_name}' + '/descriptions', glob(f'project/{project_name}/descriptions/*.urdf')))
+        projects.append(('share/' + package_name + '/project' + f'/{project_name}' + '/params', glob(f'project/{project_name}/params/*.param.json')))
     return projects
 
 def generate_console_script() -> list[str]:

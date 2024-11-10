@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<robot name="supervisor">
+    <webots>
+        <plugin type="dobotics_webots.supervisor.SupervisorDriver">
+            <parameterFile>project/RobotisOP3/params/single.param.json</parameterFile>
+        </plugin>
+    </webots>
+</robot>
